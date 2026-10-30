@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Game Mini Việt</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#10172a;color:white;text-align:center}
+header{background:#192541;padding:25px 12px}
+h1{color:#facc15;margin:0 0 10px}
+main{max-width:650px;margin:auto;padding:18px}
+.games{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.card{background:#243451;border-radius:16px;padding:22px 8px;cursor:pointer}
+.card span{font-size:38px}
+button{background:#facc15;border:0;border-radius:9px;padding:12px 20px;font-weight:bold;cursor:pointer}
+#play{margin-top:20px;background:#243451;padding:20px;border-radius:16px;min-height:150px}
+.ad{border:2px dashed #64748b;color:#cbd5e1;padding:20px;margin:22px 0;border-radius:12px}
+input{padding:12px;width:80%;max-width:250px;border-radius:8px;border:0;font-size:18px}
+</style>
+</head>
+<body>
+<header><h1>🎮 GAME MINI VIỆT</h1><p>Chơi miễn phí - Vui mỗi ngày!</p></header>
+<main>
+<div class="ad">Khu vực quảng cáo (chưa kích hoạt)</div>
+<div class="games">
+<div class="card" onclick="guess()"><span>🔢</span><h3>Đoán số</h3></div>
+<div class="card" onclick="luck()"><span>🍀</span><h3>May mắn</h3></div>
+<div class="card" onclick="math()"><span>🧠</span><h3>Tính nhanh</h3></div>
+<div class="card" onclick="clickGame()"><span>⚡</span><h3>Bấm nhanh</h3></div>
+</div>
+<section id="play"><h2>Chọn một trò chơi để bắt đầu!</h2></section>
+<div class="ad">Vị trí dành cho quảng cáo sau này</div>
+</main>
+<script>
+const p=document.getElementById('play');
+let answer=0,score=0;
+function guess(){
+answer=Math.floor(Math.random()*10)+1;
+p.innerHTML='<h2>Đoán số từ 1 đến 10</h2><input id="num" type="number" min="1" max="10"><p><button onclick="checkGuess()">Đoán ngay</button></p><p id="result"></p>';
+}
+function checkGuess(){
+let n=Number(document.getElementById('num').value);
+document.getElementById('result').textContent=n===answer?'🎉 Chính xác!':n<answer?'Số cần tìm lớn hơn!':'Số cần tìm nhỏ hơn!';
+}
+function luck(){
+let gifts=['🎁 Quà bí mật','⭐ Ngôi sao','🍀 Cỏ may mắn','💎 Kim cương'];
+p.innerHTML='<h2>Thử vận may</h2><button onclick="luck()">Bốc thăm</button><h2>'+gifts[Math.floor(Math.random()*gifts.length)]+'</h2><p>Chỉ là trò chơi giải trí, không có giải thưởng tiền thật.</p>';
+}
+function math(){
+let a=Math.floor(Math.random()*20)+1,b=Math.floor(Math.random()*20)+1;
+answer=a+b;
+p.innerHTML='<h2>'+a+' + '+b+' = ?</h2><input id="num" type="number"><p><button onclick="checkMath()">Trả lời</button></p><p id="result"></p>';
+}
+function checkMath(){
+let n=Number(document.getElementById('num').value);
+document.getElementById('result').textContent=n===answer?'🎉 Đúng rồi!':'Chưa đúng, thử lại nhé!';
+}
+function clickGame(){
+score=0;
+p.innerHTML='<h2>Bấm thật nhanh!</h2><h2 id="score">0</h2><button onclick="addScore()">BẤM +1</button>';
+}
+function addScore(){document.getElementById('score').textContent=++score;}
+</script>
+</body>
+</html>
