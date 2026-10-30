@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liên hệ - Game Mini Việt</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#10172a;color:white;line-height:1.7}
+header{text-align:center;background:#192541;padding:30px 15px}
+h1{color:#facc15}
+main{max-width:760px;margin:35px auto;padding:28px;background:#243451;border-radius:16px}
+a{color:#facc15;overflow-wrap:anywhere}
+.btn{display:inline-block;background:#facc15;color:#10172a;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:bold}
+footer{text-align:center;color:#cbd5e1;padding:25px}
+</style>
+</head>
+<body>
+<header>
+<h1>🎮 Game Mini Việt</h1>
+<p>Trang liên hệ và hỗ trợ</p>
+</header>
+<main>
+<h2>📩 Liên hệ với chúng tôi</h2>
+<p>Cảm ơn bạn đã truy cập Game Mini Việt!</p>
+<p>Nếu bạn có câu hỏi, góp ý, phát hiện lỗi trò chơi hoặc muốn trao đổi về hợp tác quảng cáo, hãy liên hệ qua email:</p>
+<p><strong>Email:</strong> <a href="mailto:datdien1911@gmail.com">datdien1911@gmail.com</a></p>
+<p><a class="btn" href="mailto:datdien1911@gmail.com?subject=Lien%20he%20Game%20Mini%20Viet">✉️ Gửi email liên hệ</a></p>
+<h2>💬 Góp ý và hỗ trợ</h2>
+<p>Chúng tôi hoan nghênh ý kiến đóng góp để cải thiện chất lượng trò chơi và trải nghiệm người dùng.</p>
+<p><a href="index.html">← Quay về trang chủ</a></p>
+</main>
+<footer>© Game Mini Việt</footer>
+</body>
+</html>
