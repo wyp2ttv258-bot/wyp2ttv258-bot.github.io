@@ -1,5 +1,5 @@
 // Bump this version when changing the offline shell or its assets.
-const CACHE='gmv-offline-v1-20261031';
+const CACHE='gmv-offline-v2-20261031';
 const CORE=['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png','./icon-maskable.png'];
 const OPTIONAL=['./gioi-thieu.html','./lien-he.html','./chinh-sach.html'];
 self.addEventListener('install',event=>{event.waitUntil((async()=>{const cache=await caches.open(CACHE);await cache.addAll(CORE);await Promise.allSettled(OPTIONAL.map(url=>cache.add(url)));await self.skipWaiting()})())});

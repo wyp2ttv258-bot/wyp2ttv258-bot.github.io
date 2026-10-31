@@ -1,8 +1,8 @@
 {
   "id": "/",
-  "name": "Game Mini Việt",
-  "short_name": "Mini Việt",
-  "description": "20 trò chơi mini miễn phí, chơi cả khi không có mạng.",
+  "name": "Vui Chơi Mỗi Ngày",
+  "short_name": "Vui Chơi",
+  "description": "Trò chơi nhỏ, niềm vui lớn — cùng rèn trí nhớ và tư duy.",
   "lang": "vi",
   "start_url": "./",
   "scope": "./",
